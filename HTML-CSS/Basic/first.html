@@ -2,31 +2,176 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Simple Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie & TV Shows Recommendation</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Raleway", sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #00203fff;
+        color: #adefd1ff;
+        text-align: center;
+        padding: 20px 0;
+      }
+      header h1 {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+      }
+      article {
+        padding: 20px;
+        text-align: center;
+      }
+      article p {
+        font-size: 1.2em;
+        color: #333;
+        font-weight: 300;
+      }
+      table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 20px;
+        text-align: center;
+      }
+      th {
+        background-color: #adefd1ff;
+        color: #00203fff;
+      }
+      td img {
+        max-width: 150px;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+      td img:hover {
+        transform: scale(1.1);
+      }
+      .image-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+      footer {
+        background-color: #00203fff;
+        color: #adefd1ff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+      }
+      footer p {
+        margin: 0;
+      }
+      footer button {
+        background-color: #adefd1ff;
+        color: #00203fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2em;
+      }
+      footer button:hover {
+        background-color: #004d40;
+      }
+      footer a {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
   </head>
-  <body style="background-color: rgb(254, 244, 248)">
-    <header style="background-color: rgb(238, 240, 243)">
-      <h1 style="color: rgb(22, 42, 64); text-align: center">
-        First Webpage Using
-        <abbr title="HyperText Markup Language">HTML</abbr>
+  <body>
+    <header>
+      <h1>
+        First Webpage Using <abbr title="HyperText Markup Language">HTML</abbr>
       </h1>
     </header>
+
     <article>
       <p>
-        My Name is <strong>Taran</strong>.But my nickname is
-        <strong>Xephorix</strong>. I am:
+        Here are a few <strong>Movies</strong> and <strong>TV Shows</strong> I
+        would <span style="color: red">recommend</span> everyone to watch:
       </p>
-      <ol>
-        <li>A Techie</li>
-        <li>A Gamer</li>
-      </ol>
-      <p>
-        This is the link to my <em>Discord server</em> :<a
-          href="https://discord.gg/PQ7C9RE5RB"
-          target="_blank"
-          >https://discord.gg/PQ7C9RE5RB</a
-        >
-      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Genre</th>
+            <th>Movies</th>
+            <th>TV Shows</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Action</td>
+            <td>
+              <div class="image-row">
+                <img src="Images/Dark-Knight.png" alt="The Dark Knight" />
+                <img src="Images/jack-reacher.png" alt="Jack Reacher" />
+                <img src="Images/rocky.png" alt="Rocky Balboa" />
+              </div>
+            </td>
+            <td>
+              <div class="image-row">
+                <img src="Images/spartacus.png" alt="Spartacus" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Sci-fi</td>
+            <td>
+              <div class="image-row">
+                <img src="Images/Blade-Runner.png" alt="Blade Runner 2049" />
+                <img src="Images/terminator.png" alt="Terminator" />
+                <img src="Images/truman.png" alt="The Truman Show" />
+              </div>
+            </td>
+            <td>
+              <div class="image-row">
+                <img src="Images/stargate.png" alt="Stargate SG-1" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Fantasy</td>
+            <td>
+              <div class="image-row">
+                <img src="Images/LOTR.png" alt="Lord of the Rings" />
+                <img src="Images/green-mile.png" alt="The Green Mile" />
+                <img src="Images/King-Arthur.png" alt="King Arthur" />
+              </div>
+            </td>
+            <td>
+              <div class="image-row">
+                <img src="Images/supernatural.png" alt="Supernatural" />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </article>
+
+    <footer>
+      <p>Click on this to join my <em>Discord server</em>:</p>
+      <button>
+        <a href="https://discord.gg/PQ7C9RE5RB" target="_blank">👽 Join Now</a>
+      </button>
+    </footer>
   </body>
 </html>
