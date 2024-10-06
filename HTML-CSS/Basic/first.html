@@ -124,6 +124,76 @@
         color: inherit;
       }
 
+      /* Contact Form Section */
+      #contact {
+        background-color: #02213b9d;
+        color: #adefd1ff;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      #contact h2 {
+        font-family: "Raleway", sans-serif;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      #contact p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+      }
+
+      form {
+        display: inline-block;
+        width: 80%;
+        max-width: 500px;
+        background-color: #00203fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px 15px rgba(0, 191, 255, 0.4);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Glowing effect */
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      textarea:focus {
+        outline: none;
+        box-shadow: 0 0 15px rgba(173, 239, 209, 0.8); /* Focus effect */
+      }
+
+      button {
+        background-color: #adefd1ff;
+        color: #00203fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2em;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #004d40;
+        box-shadow: 0 0 15px rgba(173, 239, 209, 0.8);
+      }
+
+      /* Media Queries for Contact Form */
+      @media (max-width: 768px) {
+        form {
+          width: 90%;
+        }
+      }
+
       /* Media Queries for Responsive Design */
       @media (max-width: 768px) {
         .image-row {
@@ -165,7 +235,7 @@
         Here are a few <strong>Movies</strong> and <strong>TV Shows</strong> I
         would <span style="color: red">recommend</span> everyone to watch:
       </p>
-
+      <!-- Main Table -->
       <table>
         <thead>
           <tr>
@@ -223,6 +293,25 @@
         </tbody>
       </table>
     </article>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        If you want to recommend me something, feel free to reach out below:
+      </p>
+      <form action="subit-form" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
     <footer>
       <p>Click on this to join my <em>Discord server</em>:</p>
